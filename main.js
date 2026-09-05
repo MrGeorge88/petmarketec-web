@@ -4,24 +4,6 @@
   const hasGsap = typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined';
   if (hasGsap) gsap.registerPlugin(ScrollTrigger);
 
-  /* ---------- Scroll suave (Lenis) ---------- */
-  if (!reduce && typeof Lenis !== 'undefined' && hasGsap) {
-    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
-    lenis.on('scroll', ScrollTrigger.update);
-    gsap.ticker.add((t) => lenis.raf(t * 1000));
-    gsap.ticker.lagSmoothing(0);
-    document.querySelectorAll('a[href^="#"]').forEach((a) => {
-      a.addEventListener('click', (e) => {
-        const id = a.getAttribute('href');
-        if (id.length < 2) return;
-        const el = document.querySelector(id);
-        if (!el) return;
-        e.preventDefault();
-        lenis.scrollTo(el, { offset: -70 });
-      });
-    });
-  }
-
   /* ---------- Nav sólido al hacer scroll ---------- */
   const nav = document.getElementById('nav');
   const onScroll = () => nav.classList.toggle('is-solid', window.scrollY > 40);
@@ -133,7 +115,7 @@
     if (bag) {
       gsap.to(bag, {
         rotate: 8, y: -10, ease: 'none',
-        scrollTrigger: { trigger: '.why__list', start: 'top 60%', end: 'bottom 40%', scrub: 1.2 },
+        scrollTrigger: { trigger: '.why__list', start: 'top 60%', end: 'bottom 40%', scrub: 0.4 },
       });
       gsap.to('.bag__seal line', { strokeDashoffset: -140, duration: 6, repeat: -1, ease: 'none' });
     }

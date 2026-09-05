@@ -31,9 +31,7 @@
 }
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-html.lenis{height:auto}
-.lenis.lenis-smooth{scroll-behavior:auto}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{
   margin:0;
   font-family:var(--body);
@@ -338,19 +336,6 @@ small{font-size:.85em;color:var(--muted)}
 .faq details[open] summary::after{transform:rotate(225deg)}
 .faq details p{padding:0 22px 20px;color:var(--muted);font-size:.96rem}
 @media (max-width:860px){.faq__layout{grid-template-columns:1fr}}
-
-/* ==========================================================
-   Historia
-   ========================================================== */
-.story{padding:clamp(70px,10vw,120px) 0}
-.story__layout{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
-.timeline{display:grid;gap:0;border-left:2px solid var(--line);padding-left:26px;position:relative}
-.timeline li{position:relative;padding:0 0 26px}
-.timeline li::before{content:"";position:absolute;left:-33px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--blue);border:3px solid var(--ground)}
-.timeline li:last-child::before{background:var(--gold)}
-.timeline time{font-family:var(--display);font-weight:800;font-size:1.1rem;color:var(--ink);display:block;font-variant-numeric:tabular-nums}
-.timeline p{color:var(--muted);font-size:.95rem}
-@media (max-width:860px){.story__layout{grid-template-columns:1fr}}
 
 /* ==========================================================
    CTA final + footer
