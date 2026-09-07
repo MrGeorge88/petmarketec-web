@@ -117,7 +117,6 @@
         rotate: 8, y: -10, ease: 'none',
         scrollTrigger: { trigger: '.why__list', start: 'top 60%', end: 'bottom 40%', scrub: 0.4 },
       });
-      gsap.to('.bag__seal line', { strokeDashoffset: -140, duration: 6, repeat: -1, ease: 'none' });
     }
   } else {
     reasons.forEach((r) => r.classList.add('is-active'));
