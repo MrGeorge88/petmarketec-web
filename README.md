@@ -8,7 +8,7 @@ Sitio estático (HTML + CSS + JS) sin build step. Se despliega tal cual en Verce
 - `assets/` — logos originales para reutilizar.
 
 ## Editar contenido
-- WhatsApp: buscar `wa.me/message/LG7UBGIECJFBL1` y reemplazar.
+- WhatsApp: buscar `wa.me/593997897533` y reemplazar.
 - Tamaños/fórmulas: sección `#productos` en `index.html` y las opciones del formulario `#calc`.
 - Regla de rendimiento: `DAYS_PER_LB_PER_CAT` en `main.js` (tabla oficial WBCL: 8 lb → 38+ días, 1 gato).
 
