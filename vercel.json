@@ -1,1 +1,18 @@
-{ "cleanUrls": true, "headers": [ { "source": "/(.*)", "headers": [ { "key": "X-Content-Type-Options", "value": "nosniff" } ] } ] }
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/index.php", "destination": "/", "permanent": true },
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/inicio", "destination": "/", "permanent": true },
+    { "source": "/(productos|producto|products|product|tienda|shop|store|catalogo|arenas|arena-para-gatos)", "destination": "/#productos", "permanent": true },
+    { "source": "/(productos|producto|products|product|tienda|shop|store|catalogo|product-category|categoria-producto|collections)/:path*", "destination": "/#productos", "permanent": true },
+    { "source": "/(distribuidores|donde-comprar|puntos-de-venta|contacto|contactos|contact|contact-us|contactenos)", "destination": "/#donde-comprar", "permanent": true },
+    { "source": "/(preguntas-frecuentes|faq|faqs)", "destination": "/#faq", "permanent": true },
+    { "source": "/(nosotros|about|about-us|quienes-somos|blog|kittyspring|catzone|worlds-best-cat-litter)", "destination": "/", "permanent": true },
+    { "source": "/(blog|kittyspring|catzone|cart|carrito|checkout|my-account|mi-cuenta)/:path*", "destination": "/", "permanent": true }
+  ],
+  "headers": [
+    { "source": "/(.*)", "headers": [ { "key": "X-Content-Type-Options", "value": "nosniff" } ] }
+  ]
+}
